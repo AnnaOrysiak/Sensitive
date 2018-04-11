@@ -1,0 +1,208 @@
+.opowiadanie {
+	width: 100%;
+}
+
+.opowiadanie_tytul {
+	width: 100%;
+	margin-top: 20px;
+	padding: 10px 0px;
+	background-color: #BCA88F;
+	color: #905000;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+        font-weight: 700;
+	letter-spacing: 2px;
+	text-align: center;
+        border: 1px solid;
+        border-color: #FAEEE0;
+	border-radius: 20px;
+}
+
+input[type='submit']{
+	width: 90%;
+	margin-left: auto;
+        margin-right: auto;
+	padding: 10px 20px;
+	background-color: transparent;
+	color: saddlebrown;
+        border-right: 1px solid #FAEEE0;
+        border-bottom: 1px solid #FAEEE0;
+        border-left: none;
+        border-top: none;
+	outline: none;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	letter-spacing: 2px;
+        text-align: left;
+	display: block;
+	cursor: pointer;
+}
+
+input[type='submit']:hover {
+	color: #FAEEE0;
+}
+
+.menu_option {
+    background-color: transparent;
+    color: #312111;
+    padding: 10px;
+    margin: 0px 20px;
+    width: 150px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.menu_option:hover {
+    background-color: transparent;
+    color: #FAEEE0;
+}
+
+.menu_input {
+    background-color: transparent;
+    color: #312111;
+    padding: 5px 3px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.menu_input:hover {
+    background-color: transparent;
+    color: #FAEEE0;
+}
+
+.hidden_area {
+    width: 150px;
+    height: 100px;
+    float: left;
+    background-color: transparent;
+    padding: 0px;
+    font-size: 10px;
+    text-align: center;
+   /*display: inline-block; */
+    display: none;
+    border: none;
+    position: fixed;
+}
+
+input[type="text"], input[type="password"] {
+    width: 110px;
+    background-color: #BCA88F;
+    color: #905000;
+    padding: 5px 10px;
+    border: 1px solid #312111;
+    border-radius:5px;
+    margin-bottom: 5px;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+input[type="password"] {
+    letter-spacing:5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #905000;
+    background-color: #BCA88F;
+    color: #fff;
+}
+
+input[type="submit"]#zaloguj {
+    width: 70px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: #BCA88F;
+    border: 2px solid #FAEEE0;
+    border-radius: 20px;
+    font-size: 10px;
+    text-align: center;
+    position: static;
+}
+
+input[type="submit"]#zaloguj:hover {
+    background-color: #C5B49F;
+    color: #fff;
+}
+
+.tytul_kategorie {
+      background-color: transparent;
+      height: 10px;
+      width: auto;
+      font-size: 16px;
+      margin-left: 35px;
+}
+
+.tytul_kat {
+    float: left;
+    padding: 0px;
+    margin: 20px;
+    width: auto;
+
+}
+
+.tytul_kat  input[type='submit'][name='podtytul'] {
+    margin-left: 0px;
+    padding: 5px 0px;
+    float:left;
+    font-size: 16px;
+    display: block;
+    width: auto;
+}
+
+.tytul_kategorie  input[type='submit'][name='tytul'] {
+    margin-left: 20px;
+    padding: 5px 0px;
+    float: left;
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    width: auto;
+    border: none;
+    color: #aa6600;
+}
+
+.tytul_kategorie  input[type='submit'][name='tytul']:hover {
+    color: #aa6600;
+}
+
+.kategoria {
+    vertical-align: middle;
+    padding: 3px 0px;
+    margin: 5px;
+    font-size: 12px;
+    display: inline-table;
+    color: #BCA88F;
+    width: auto;    
+}
+
+input[type='submit'][name='podtytul'] {
+        width: 350px;
+        margin-left: 50px;
+        padding: 10px;
+        background-color: transparent;
+        color: #aa6600;
+        border: none;
+        outline: none;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-align: left;
+        display: block;
+        cursor: pointer;
+}
+
+input[type='submit'][name='podtytul']:hover {
+    color: #aa6600;
+}
+
+@media all and (max-width:540px) {
+    .menu_option {
+        padding: 0px;
+        margin: 0px;
+    }
+}

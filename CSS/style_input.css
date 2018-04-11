@@ -1,0 +1,283 @@
+
+/*		pola edycji rozdziałów		*/
+
+input.tytul {
+	width: 702px;
+	height: 60px;
+	margin: 10px;
+	padding: 20px;
+	background-color: #000;
+	border: 1px solid #fff;
+	border-radius: 20px 20px 0 0;
+	font-family:'Fondamento', cursive;
+	font-size: 26px;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 2px;
+	box-sizing: border-box;
+	outline: none;
+	display: block;
+}
+
+input.tytul:focus {
+	width: 702px;
+	height: 60px;
+	padding: 20px;
+	background-color: #001000;
+	border: 1px solid #fff;
+	font-family:'Fondamento', cursive;
+	font-size: 26px;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 2px;
+	box-sizing: border-box;
+	outline: none;
+}
+
+textarea {
+	width: 90%;
+	height: 400px;
+	margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+	padding: 20px;
+	background-color: transparent;
+	border: 1px dotted #BCA88F;
+	border-radius: 10px;
+	font-family:'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: saddlebrown;
+	text-align: justify;
+	letter-spacing: 2px;
+        text-indent: 10%;
+	outline: none;
+	overflow: auto;
+	vertical-align: top;
+	display: block;
+	white-space: pre-wrap;
+}
+
+textarea:focus {
+	width: 90%;
+	height: 400px;
+	padding: 20px;
+	background-color: transparent;
+	border: 1px dotted #BCA88F;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: saddlebrown;
+	text-align: justify;
+	letter-spacing: 2px;
+	outline: none;
+	overflow: auto;
+}
+
+input.zatwierdz{
+	width: 120px;
+	height: 120px;
+	margin: 10px;
+	padding: 30px 0px;
+	background-color: #BCA88F;
+	border: 2px solid #840;
+	border-radius: 60px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	outline: none;
+}
+
+input.zatwierdz:hover {
+	background-color: #840;
+	border: 2px solid #a60;
+	color: #fff;
+}
+
+/*          edycja notki        */
+
+input.notka {
+	background-color: transparent;
+	width: 320px;
+	border: 2px solid orange;
+	border-radius: 5px;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	padding: 7px 20px;
+	outline: none;
+	text-align: left;
+}
+
+input.notka:hover {
+	background-color: #bb6100;
+	color: #fff;
+}
+
+textarea[name='notka'] {
+	height: 300px;
+}
+
+/*      edycja config       */
+
+input[type="text"][name='login'] {
+   width: 180px; 
+   margin: 5px;
+   padding: 10px;
+   background-color: transparent;
+   border: 1px dotted #BCA88F;
+   border-radius: 10px;
+   color: #BCA88F;
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   box-sizing: border-box;
+   outline: none;
+   letter-spacing: 2px;
+   text-align: left;
+}
+
+input[type=password]{
+	width: 180px;
+	margin: 5px;
+	padding: 10px;
+	background-color: transparent;
+	border: 1px dotted #BCA88F;
+	border-radius: 10px;
+	color: #BCA88F;
+	font-size: 14px;
+	box-sizing: border-box;
+	outline: none;
+        letter-spacing: 3px;
+}
+
+input[type="text"][name='autor'], input[type="text"][name='mail'] {
+   width: 180px; 
+   margin: 5px;
+   padding: 10px;
+   background-color: transparent;
+   border: 1px solid #BCA88F;
+   border-radius: 10px;
+   color: saddlebrown;
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   box-sizing: border-box;
+   outline: none;
+   letter-spacing: 2px;
+   text-align: left;
+}
+
+
+input[type=text]:focus,
+input[type=password]:focus
+{
+	background-color: #BCA88F;
+	border: 2px solid #840;
+	color: orange;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+input[type="text"][name='autor']:focus, input[type="text"][name='mail']:focus {
+   width: 180px; 
+   margin: 5px;
+   padding: 10px;
+   background-color: #EADED0;
+   border: 1px solid #AC987F;
+   border-radius: 10px;
+   color: saddlebrown;
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   box-sizing: border-box;
+   outline: none;
+   letter-spacing: 2px;
+   text-align: left;
+}
+
+textarea[name="opis"] {
+    width: 300px;
+    height: 200px;
+}
+
+input[type=submit]{
+	width: 150px;
+	margin: 0px;
+	padding: 10px 0px;
+	background-color: #BCA88F;
+	border: 1px solid #BCA88F;
+	border-radius: 20px;
+	color: saddlebrown;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover{
+	background-color: #FAEEE0;
+	color: saddlebrown;
+}
+
+#user2 > input[type="file"]{
+	height: 25px;
+	background-color: transparent;
+	color: saddlebrown;
+	border: none;
+	border-radius: 5px;
+	padding-top: 4px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+	outline: none;
+}
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+	background-color: #BCA88F;
+	color: saddlebrown;
+	margin: 1px;
+	padding: 4px 10px;
+	border: 1px solid #840;
+	border-radius: 20px;
+	outline: none;
+	cursor: pointer;
+}
+#user2 > input[type="button"] {
+	width: 60px;
+	height: 25px;
+	background-color: #BCA88F;
+	color: #840;
+	border: 1px solid #840;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+}
+
+input::-webkit-input-placeholder{
+	color: #a60;
+}
+
+input:focus::-webkit-input-placeholder{
+	color: #a60;	
+}
+
+input:-moz-placeholder{
+	color: #a60;
+}
+
+input:focus:-moz-placeholder{
+	color: #a60;
+}
+
+input::-moz-placeholder{
+	color: #a60;
+}
+
+input:focus::-moz-placeholder{
+	color: #a60;
+}
+
+input:-ms-placeholder{
+	color: #a60;
+}
+
+input:focus:-ms-placeholder{
+	color: #a60;
+}

@@ -1,0 +1,137 @@
+/*		style listy górnego menu	*/
+
+ol {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	font-size: 12px;
+	letter-spacing: 2px;
+	height: 27px;
+	line-height:200%;
+	display: inline-block;
+	
+}
+
+ol > li {
+	float: left;
+	width:180px;
+	height:31px;
+	background-color: #851d00;
+	border-radius: 30px 30px 0px 0px;
+	margin: 1px;
+	padding-top:9px;
+}
+
+ol > li:hover {
+	background-color: #a73f22;
+	cursor: pointer;
+}
+
+ol > li > ul {
+	margin: 0px;
+	padding: 6px 0px;
+	list-style-type: none;
+	font-size: 12px;
+	letter-spacing: 2px;
+	height: 30px;
+	/*display: none;*/
+	transform-origin:50% 0;
+	transform:scaleY(0);
+	transition-duration:250ms;
+}
+
+ol > li:hover > ul {
+	display: block;
+	transform:scaleY(1);
+}
+
+ol > li > ul > li {
+	background-color: #a73f22;
+	position: relative;
+	z-index: 100;
+	border-top: 1px dashed #a00a00;
+	padding: 5px 0px;
+	box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.75);	
+}
+
+ol > li > ul > li:last-child {
+			border-radius: 0px 0px 30px 30px;
+}
+
+ol > li > ul > li > a {
+	color: #fff;
+	text-decoration: none;
+}
+
+ol > li > ul > li:hover {
+	background-color: #b84f33;
+	cursor: pointer;
+}
+
+/*		style listy bocznego menu		*/
+
+ul.bar, ul.bar li, ul.bar li ul, ul.bar li ul li {
+	display:block;
+	padding: 0;
+	margin:0;
+	list-style:none;
+}
+
+ul.bar {
+	width: 220px;
+}
+
+ul.bar > li {
+	background-color: #000;
+	margin-bottom:10px;
+}
+
+ul.bar > li > ul {
+	width:220px;
+	color: orange;
+}
+
+ul.bar > li > ul > li {
+	width:180px;
+	margin-left:18px;
+	padding: 10px 0px;
+	background-color: #000;
+	border-left: 1px dashed orange;
+	border-right: 1px dashed orange;
+	border-bottom: 1px dashed orange;
+	font-size:14px;
+}
+
+ul.bar > li > ul > li:first-child {
+	width:220px;
+	margin-left:0;
+	border:0;
+	border-radius: 20px;
+	background-color: #400400;
+	font-size:16px;
+}
+
+ul.bar > li > ul > li:last-child {
+	width:180px;
+	margin-left:18px;
+	padding: 10px 0px;
+	background-color: #000;
+	border-left: 1px dashed orange;
+	border-right: 1px dashed orange;
+	border-bottom: 1px dashed orange;
+	border-radius: 0px 0px 20px 20px;
+}
+
+ul.bar > li > ul > li > a {
+	text-decoration:none;
+	color:white;
+	font-size:14px;
+}
+
+ul.bar > li > ul > li > a:hover {
+	text-decoration:none;
+	color:red;
+	font-size:14px;
+}

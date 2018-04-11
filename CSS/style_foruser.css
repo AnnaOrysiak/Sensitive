@@ -1,0 +1,175 @@
+body {
+	background-color:#100000;
+	color:#996000;
+	font-family: 'Raleway', sans-serif;
+	font-size:18px;
+	letter-spacing:3px;
+}
+div {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10%;
+	width:300px;
+	min-height:5%;
+	text-align:center;
+	background-color:#000;
+	border:1px dashed orange;
+	padding:20px;
+	border-radius:20px;
+}
+
+h1 {
+	font-size:20px;	
+	color:#aa8000;
+}
+
+h2 {
+	font-size:16px;	
+}
+
+
+#kontener {
+	width:80%;
+	margin-top:5%;
+	text-align:center;
+	border:none;
+}
+
+#inputy1 {
+	width:100%;
+	margin-top:10%;
+	margin-bottom:2%;
+	text-align:center;
+	border:none;
+	padding:0px;
+	font-size:14px;
+}
+
+#potwierdz {
+	text-align:center;
+	border:none;
+	clear:both;
+	padding:0%;
+	padding-top:10%;
+	width:40%;
+	margin-top:5%;
+}
+
+#czysc {
+	clear:both; 
+	border:none; 
+	width:1px; 
+	height:1px; 
+	min-height:1px;
+	margin:0px; 
+	padding:0px;
+}
+
+input[type="password"] {
+	background-color: #100000;
+	width:200px;
+	padding:5px;
+	color: orange;
+	border:1px solid #220000; 
+	outline:none;
+	letter-spacing:5px;
+}
+
+input[type="password"]:focus {
+	background-color: #200000;
+	border-color:#330000;
+	color:#fff;
+}
+
+input[type="submit"] {
+	width:50px;
+	height:50px;
+	background-color: #002000;
+	padding:5px;
+	color:#fff;
+	border:2px solid #009900;
+	border-radius:30px;
+	outline:none;
+	cursor:pointer;
+	letter-spacing:2px;
+}
+
+input[type="submit"]:hover {
+	background-color:#003300;
+}
+
+input[type="text"] {
+	background-color: #100000;
+	width:200px;
+	padding:5px;
+	color: orange;
+	border:1px solid #220000; 
+	outline:none;
+	letter-spacing:3px;	
+}
+
+input[type="text"]:focus {
+	background-color: #200000;
+	border-color:#330000;
+	color:#fff;
+}
+
+input:-moz-placeholder {color: #997711}
+input::-webkit-input-placeholder {color: #997711}
+
+
+.error {
+	color: #cc0000;
+	width: 320px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: none;
+	font-size: 10px;
+	font-weight: 400;
+	text-decoration: none;
+	padding: 0px;
+}
+
+label {
+	cursor:pointer;
+}
+
+div.g-recaptcha{
+	margin:0px;
+	border:0px;
+	padding:0px;
+	width:304px;
+	min-height:auto;
+	border:none;
+	clear:both;
+	font-size:12px;
+	text-align:center;
+}
+
+.g-recaptcha div{
+	margin:0px;
+	border:0px;
+	padding:0px;
+	width:304px;
+	height:78px;
+	min-height:auto;
+	border:none;
+	clear:both;
+}
+
+.g-recaptcha div > div{
+	margin:0px;
+	border:0px;
+	padding:0px;
+	width:304px;
+	min-height:auto;
+	border:none;
+	clear:both;
+}
+
+.g-recaptcha div > iframe {
+	background-color:#000;
+	border: 1px solid #220000;
+	margin:0px;
+	border-radius:5px;
+}
