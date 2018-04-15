@@ -16,22 +16,22 @@ $wynik=$db->query($notki);
 $ostatnie=$wynik->num_rows;
 for($i=0; $i<$ostatnie; $i++) {
 	$wiersz=$wynik->fetch_assoc();
-	echo "<div class='element'>";
-	echo "<div class='lewy'>";	
+	echo "<div class='row align-items-start newsElement'>";
+	echo "<div class='newsLeft col-2'>";	
 	
 	$av="SELECT  `avatar` FROM  `uzytkownicy` WHERE  `autor` LIKE '".$wiersz['autor']."'";
 	$w_av=$db->query($av);
 	$ile_av=$w_av->num_rows;
 	for($j=0; $j<$ile_av; $j++) {
 		$w=$w_av->fetch_assoc();
-		echo "<div class='avik'><img src='/img/av/".$w['avatar']."' /></div>"; 
+		echo "<div class='newsAv'><img src='img/av/".$w['avatar']."' class='img-fluid float-left' /></div>"; 
 	}
 	
-	echo "<div class='data'>".$wiersz['data']."</div>";
-	echo "<div class='autor'>".$wiersz['autor']."</div></div>";
-	echo "<div class='prawy'>";
-	echo "<div class='tytul'>".$wiersz['notka_tytul']."</div>";
-	echo "<div class='notka'>".$wiersz['notka']."</div></div>";
+	echo "<div class='newsDate'>".$wiersz['data']."</div>";
+	echo "<div class='newsAuthor'>".$wiersz['autor']."</div></div>";
+	echo "<div class='newsRight'>";
+	echo "<div class='newsTitle'>".$wiersz['notka_tytul']."</div>";
+	echo "<div class='news'>".$wiersz['notka']."</div></div>";
 	echo "<div style='clear:both;'></div>";
 	echo "</div>";
 

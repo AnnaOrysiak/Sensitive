@@ -1,4 +1,4 @@
-.element {
+.newsElement {
 	min-height: 50px;
 	width: 100%;
 	border: none;
@@ -10,9 +10,10 @@
 	background-color: transparent;
 }
 
-.lewy {
+.newsLeft {
 	background-color: #BCA88F;
-        width: 100px;
+        min-width: 100px;
+        max-width: 150px;
 	float: left;
 	margin: 0px;
 	padding: 5px;
@@ -21,29 +22,30 @@
 	min-height: 100px;
 }
 
-.avik {
+.newsAv {
 	text-align: center;
 	padding: 0px;
+        width: auto;
 }
 
-.data {
+.newsDate {
 	text-align: center;
 	font-size: 12px;
 	padding: 5px 0px;
 }
 
-.autor {
+.newsAuthor {
 	text-align: center;
 	font-size: 12px;
         padding: 5px 0px;
 }
 
-.prawy {
+.newsRight {
 	float: left;
 	width: 80%;
 }
 
-.tytul {
+.newsTitle {
 	font-family: 'Marck Script', cursive;
 	font-size: 24px;
         background-color: #BCA88F;
@@ -55,8 +57,8 @@
 	text-align: center;
 }
 
-.notka {
-	min-height: 129px;
+.news {
+	min-height: 144px;
 	font-size: 14px;
 	letter-spacing: 3px;
 	line-height: 180%;
@@ -67,15 +69,15 @@
 }
 
 @media all and (max-width: 540px) {
-    .prawy {
+    .newsRight {
 	float: left;
 	width: 70%;
     }
-    .tytul {
+    .newsTitle {
 	font-family: 'Marck Script', cursive;
 	font-size: 18px;
     }
-    .notka {
+    .news {
 	font-size: 12px;
 	padding: 10px;
     }

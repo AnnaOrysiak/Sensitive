@@ -13,6 +13,15 @@ body {
     color: saddlebrown;
 }
 
+a {
+    color: #312111;
+}
+
+a:hover {
+    color: #BCA88F;
+    text-decoration: none;
+}
+
 .container-fluid, class {
     padding: 0px;
 }
@@ -56,7 +65,7 @@ img[name="logoImg"] {
 }
 
 .navibar {
-    
+    background-color: transparent;
 }
 
 .menu {
@@ -71,7 +80,37 @@ img[name="logoImg"] {
     text-align: center;  
 }
 
+.hiddenArea {
+    background-color: #FAEEE0;
+    color: #312111;
+    width: 60px;
+    height: 60px;   
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    right: 3%;
+    top: 5%;
+    z-index: 1;
+}
 
+.naviRight {
+    background-color: #FAEEE0;
+    color: #312111;
+    width: 60px;
+    height: 60px;   
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    z-index: 1;
+}
+
+i.icon-user, i.icon-up {
+    border: 2px solid #BCA88F;
+}
 
 /* POPRAWKI DO GOTOWEGO OSTYLOWANIA*/
 

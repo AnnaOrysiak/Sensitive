@@ -42,50 +42,51 @@ input[type='submit']:hover {
 	color: #FAEEE0;
 }
 
-.menu_option {
-    background-color: transparent;
-    color: #312111;
-    padding: 10px;
-    margin: 0px 20px;
+.menuOption {
+    background-color: #BCA88F;
+    color: #905000;
+    padding: 3px;
+    margin: 10px 10px;
     width: 150px;
-    height: 20px;
+    min-height: 30px;
     display: inline-block;
     text-align: center;
     border-radius: 20px;
 }
 
-.menu_option:hover {
-    background-color: transparent;
+.menuOption:hover {
+    background-color: #CDB99F;
     color: #FAEEE0;
 }
 
-.menu_input {
+.menuInput {
     background-color: transparent;
     color: #312111;
-    padding: 5px 3px;
+    padding: 7px 0px;
     width: 50px;
     height: 50px;
     display: inline-block;
-    border-radius: 20px;
+    position: static;
+    z-index: 2;
 }
 
-.menu_input:hover {
+.menuInput:hover {
     background-color: transparent;
-    color: #FAEEE0;
+    color: #BCA88F;
 }
 
-.hidden_area {
+.showHiddenArea {
     width: 150px;
-    height: 100px;
-    float: left;
-    background-color: transparent;
+    height: 180px;
+    float: right;
+    background-color: #FAEEE0;
     padding: 0px;
     font-size: 10px;
     text-align: center;
-   /*display: inline-block; */
     display: none;
     border: none;
-    position: fixed;
+    position: static;
+    border-radius: 20px;
 }
 
 input[type="text"], input[type="password"] {

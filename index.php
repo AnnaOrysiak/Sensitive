@@ -28,13 +28,13 @@
 ?>
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl_PL">
   <head>
     <title>Sensitive - opowiadania</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
     <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -47,6 +47,10 @@
     <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Raleway:400,400italic,700,700italic|Poiret+One|Dancing+Script:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Marck+Script|Courgette|Niconne|Belleza|Fondamento|Quintessential|Overlock+SC&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- Others -->
+        <link rel="Shortcut icon" href="favicon.ico" />
+        <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+        <?php include "scripts/login.js"; ?>
   </head>
   <body>
 
@@ -75,7 +79,19 @@
             
             <div class="row align-items-end justify-content-between footer">
                 <div class="col-12"> <div class="repeatImgUp"> </div> </div>
-                <div class="col-12"> STOPKA </div>
+                <div class="col-12"> <br> - Sensitive &copy; 2018 - Anna Orysiak - wszystkie prawa zastrzeżone - </div>
+            </div>
+            
+            <div style="clear:both;"></div>
+            <div class="hiddenArea rounded-circle"> 
+                <div class="menuInput rounded-circle" id="userLogin"><i class="icon-user rounded-circle"></i></div> 
+                <div style="clear:both;"></div>
+                <div class="showHiddenArea"> <?php include "include/author_login.php"; ?></div>
+            </div>
+            <div class="naviRight rounded-circle">
+                <div class="menuInput rounded-circle">
+                    <a href="javascript:scroll(0,0);"><i class="icon-up rounded-circle"></i></a>
+                </div>
             </div>
             
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -91,5 +107,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
   </body>
 </html>
