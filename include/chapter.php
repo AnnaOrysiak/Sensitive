@@ -43,7 +43,7 @@
                                             <input type='hidden' value='$poprzedni' id='previcon' name='rozdzial_nr' />
                                             <input type='hidden' value='$id' id='previd' name='id' />
                                             <button type='submit' class='ikonka'>
-                                                    <i class='icon-left-open-outline'></i>
+                                                    <i class='icon-left-openk'></i>
                                             </button>
                                         </form>";                                        
                                 }
@@ -53,7 +53,7 @@
                                             <input type='hidden' value='$nastepny' id='nexticon' name='rozdzial_nr' />           
                                             <input type='hidden' value='$id' id='nextid' name='id' />          
                                             <button type='submit' class='ikonka'>
-                                                    <i class='icon-right-open-outline'></i>
+                                                    <i class='icon-right-open'></i>
                                             </button>
 					</form>";
 				}	

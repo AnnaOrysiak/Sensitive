@@ -59,7 +59,7 @@
             <div class="row align-items-start logoArea">
                 <img src="img/sensitive_us.png" class="img-fluid float-left" name="logoImg"> 
                 <div class="col-12"> <div class="repeatImgUp"> </div> </div>
-                <div class="col-8">  </div>
+                <div class="col-8"> <div class="imgArea"> </div> </div>
                 <div class="col-4 align-self-end h1"><span style="color: #9C886F;"><i class="icon-feather"></i></span>Sensitive</div>
                 <div class="col-12 align-self-end"> <div class="repeatImgDown"> </div> </div>
             </div>
@@ -68,13 +68,17 @@
                 <div class="col-12 align-self-start navibar"> 
                     <?php include "include/navibar.php";?>
                 </div>
-                <div class="col-12 col-md-4 mr-md-auto align-self-start order-2 d-none d-md-block menu"> 
+                <div class="col-0 col-md-0 col-lg-0 col-xl-1 order-1">
+                </div>   
+                <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3 mr-md-auto align-self-start order-3 d-none d-sm-none d-md-none d-lg-block menu"> 
                     <?php include "include/menu.php";?>
                 </div>
-                <div class="col-12 col-md-8 ml-md-auto align-self-start order-1 content">  
+                <div class="col-12 col-md-12 col-lg-9 col-xl-7 ml-md-auto align-self-start order-2 content">  
                     <?php include "include/content.php";?>
                     <div style="clear:both;"></div>
                 </div>
+                <div class="col-0 col-md-0 col-lg-0 col-xl-1 order-4">
+                </div>   
             </div>
             
             <div class="row align-items-end justify-content-between footer">
@@ -89,9 +93,9 @@
                 <div class="showHiddenArea"> <?php include "include/author_login.php"; ?></div>
             </div>
             <div class="naviRight rounded-circle">
-                <div class="menuInput rounded-circle">
-                    <a href="javascript:scroll(0,0);"><i class="icon-up rounded-circle"></i></a>
-                </div>
+                <a href="javascript:scroll(0,0), 500;">
+                    <div class="menuInput rounded-circle"><i class="icon-up rounded-circle"></i></div>
+                </a> 
             </div>
             
             <div class="alert alert-warning alert-dismissible fade show" role="alert">

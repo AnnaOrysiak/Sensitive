@@ -96,6 +96,39 @@
 	border-radius: 20px;
 }
 
+/* ZMIANA ROZDZIELCZOŚCI */
+
+@media all and (max-width: 960px) {
+     .tytul_r {
+	padding: 10px 0px;
+	min-height: 20px;
+	font-family: 'Fondamento', cursive;
+	font-size: 18px;
+    }
+    .tresc_r {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .tytul_r {
+	padding: 10px 0px;
+	min-height: 20px;
+	font-family: 'Fondamento', cursive;
+	font-size: 18px;
+    }
+    .tresc_r {
+        margin-top: 20px;
+	font-size: 14px;
+    }
+    .stronicowanie_r {
+        width: 400px;
+    }
+    .odstep {
+	min-width: 300px;
+    }
+}
 @media all and (max-width: 540px) {
     .pojemnik {
         line-height: 150%;
@@ -109,6 +142,12 @@
     .tresc_r {
 	margin-top: 20px;
 	font-size: 14px;
+    }
+    .stronicowanie_r {
+        width: 300px;
+    }
+    .odstep {
+	min-width: 200px;
     }
     .autor_r {
 	font-size: 14px;

@@ -38,10 +38,11 @@ img[name="logoImg"] {
     position: fixed;
     z-index: 0;
     top: 5%;
-    min-height: 20%;
+    min-height: 25%;
     max-height: 100%;
     width: auto;
 }
+
 .repeatImgUp {
     background-image: url("../img/borderimg1.png");
     background-repeat: repeat-x;
@@ -56,6 +57,11 @@ img[name="logoImg"] {
     min-height: 100px;
 }
 
+.imgArea {
+    min-height: 350px;
+    margin: 40px 0px;
+}
+
 .mainArea {
     background-color: #FAEEE0;
     position: relative;
@@ -65,7 +71,11 @@ img[name="logoImg"] {
 }
 
 .navibar {
-    background-color: transparent;
+    background-color: #FAEEE0;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    text-align: center;
 }
 
 .menu {
@@ -78,6 +88,7 @@ img[name="logoImg"] {
 
 .footer {
     text-align: center;  
+    color: #312111;
 }
 
 .hiddenArea {
@@ -112,7 +123,17 @@ i.icon-user, i.icon-up {
     border: 2px solid #BCA88F;
 }
 
-/* POPRAWKI DO GOTOWEGO OSTYLOWANIA*/
+/* ZMIANA ROZDZIELCZOŚCI */
+
+@media all and (max-width:680px) {
+    .imgArea {
+        min-height: 250px;
+        margin: 0px 0px;
+    }
+
+}
+
+/* POPRAWKI DO GOTOWEGO OSTYLOWANIA */
 
 .alert {
     margin-bottom: 0rem;

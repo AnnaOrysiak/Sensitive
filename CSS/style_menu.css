@@ -45,7 +45,7 @@ input[type='submit']:hover {
 .menuOption {
     background-color: #BCA88F;
     color: #905000;
-    padding: 3px;
+    padding: 5px 3px;
     margin: 10px 10px;
     width: 150px;
     min-height: 30px;
@@ -91,10 +91,10 @@ input[type='submit']:hover {
 
 input[type="text"], input[type="password"] {
     width: 110px;
-    background-color: #BCA88F;
-    color: #905000;
+    background-color: #FAEEE0;
+    color: #BCA88F;
     padding: 5px 10px;
-    border: 1px solid #312111;
+    border: 1px solid #BCA88F;
     border-radius:5px;
     margin-bottom: 5px;
     outline: none;
@@ -106,8 +106,8 @@ input[type="password"] {
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #905000;
-    background-color: #BCA88F;
+    border-color: #BCA88F;
+    background-color: #DECAAF;
     color: #fff;
 }
 
