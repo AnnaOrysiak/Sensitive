@@ -8,21 +8,22 @@
 	}
         
         // sprawdzenie, czy zmienne zostaly wyslane postem //
-        if(isset($_GET['podstrona'])) {
-            $pickcont['podstrona'] = $_GET['podstrona'];
+        if(isset($_GET['subpage'])) {
+            $pickcont['subpage'] = $_GET['subpage'];
         }
         
-        if(isset($_POST['rozdzial_nr'])) {
-            $pickcont['rozdzial']['rozdzial_nr'] = $_POST['rozdzial_nr']; 
-            $pickcont['rozdzial']['id'] = $_POST['id'];
-                if(isset($_POST['rozdzial_tytul'])) {
-                    $pickcont['rozdzial']['tytul'] = $_POST['tytul'];
+        if(isset($_POST['chapterNumber'])) {
+            $pickcont['chapter']['chapterNumber'] = $_POST['chapterNumber']; 
+            $pickcont['chapter']['id'] = $_POST['id'];
+                if(isset($_POST['chapterTitle'])) {
+                    $pickcont['chapter']['title'] = $_POST['title'];
                 }
-                else {$pickcont['rozdzial']['tytul'] = "brak";}
-            }
+                else {$pickcont['chapter']['title'] = "brak";}
+        }
+            
         else if(isset($_POST['id'])) {
-            $pickcont['rozdzial']['id'] = $_POST['id'];
-            $pickcont['rozdzial']['tytul'] = $_POST['tytul'];
+            $pickcont['chapter']['id'] = $_POST['id'];
+            $pickcont['chapter']['title'] = $_POST['title'];
         }
 
 ?>
@@ -59,8 +60,10 @@
             <div class="row align-items-start logoArea">
                 <img src="img/sensitive_us.png" class="img-fluid float-left" name="logoImg"> 
                 <div class="col-12"> <div class="repeatImgUp"> </div> </div>
-                <div class="col-8"> <div class="imgArea"> </div> </div>
-                <div class="col-4 align-self-end h1"><span style="color: #9C886F;"><i class="icon-feather"></i></span>Sensitive</div>
+                <div class="col-0 col-lg-0 col-xl-2">
+                </div>
+                <div class="col-8 col-lg-8 col-xl-7 align-items-center"> <div class="imgArea"> </div> </div>
+                <div class="col-4 col-lg-4  col-xl-3 align-self-end"><span style="color: #9C886F;"><i class="icon-feather"></i></span>Sensitive</div>
                 <div class="col-12 align-self-end"> <div class="repeatImgDown"> </div> </div>
             </div>
            
@@ -70,10 +73,10 @@
                 </div>
                 <div class="col-0 col-md-0 col-lg-0 col-xl-1 order-1">
                 </div>   
-                <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3 mr-md-auto align-self-start order-3 d-none d-sm-none d-md-none d-lg-block menu"> 
+                <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3 mr-md-author align-self-start order-3 d-none d-sm-none d-md-none d-lg-block menu"> 
                     <?php include "include/menu.php";?>
                 </div>
-                <div class="col-12 col-md-12 col-lg-9 col-xl-7 ml-md-auto align-self-start order-2 content">  
+                <div class="col-12 col-md-12 col-lg-9 col-xl-7 ml-md-author align-self-start order-2">  
                     <?php include "include/content.php";?>
                     <div style="clear:both;"></div>
                 </div>
@@ -96,13 +99,6 @@
                 <a href="javascript:scroll(0,0), 500;">
                     <div class="menuInput rounded-circle"><i class="icon-up rounded-circle"></i></div>
                 </a> 
-            </div>
-            
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Uwaga!</strong> Jestem komunikatem, który możesz zamknąć.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
 
         </div>

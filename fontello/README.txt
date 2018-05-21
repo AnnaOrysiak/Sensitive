@@ -46,7 +46,7 @@ Because we like to fit all your needs :)
 
 - *-codes.css and *-ie7-codes.css - if you like to use your own @font-face
   rules, but still wish to benefit from css generation. That can be very
-  convenient for automated asset build systems. When you need to update font -
+  convenient for authormated asset build systems. When you need to update font -
   no need to manually edit files, just override old version with archive
   content. See fontello source code for examples.
 

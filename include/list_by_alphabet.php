@@ -1,58 +1,57 @@
 <?php
 
-echo "<div class='tytul_r'>Spis alfabetyczny</div><div class='tresc_r'>";
+echo "<div class='chapterTitle'>Spis alfabetyczny</div><div class='chapterContent'>";
 
 include "connected.php";
 
-    $wyswietl = "SELECT * FROM kategorie ORDER BY tytul";
-    $wynik_alfabet = $db->query("SET NAMES utf8");
-    $wynik_alfabet = $db->query($wyswietl);
+    $wyswietl = "SELECT * FROM kategorie ORDER BY title";
+    $result_alphabet = $db->query("SET NAMES utf8");
+    $result_alphabet = $db->query($wyswietl);
     
-    $ile_alfabet = $wynik_alfabet -> num_rows;
+    $how_many_alphabet = $result_alphabet -> num_rows;
     
-    for($a=0; $a < $ile_alfabet; $a++) {
-        $wiersz = $wynik_alfabet -> fetch_assoc();
-        $id = $wiersz['opowiadanie_id'];       
+    for($a=0; $a < $how_many_alphabet; $a++) {
+        $line = $result_alphabet -> fetch_assoc();
+        $id = $line['storyId'];       
         
-        if (($wiersz['kategoria']=="Opowiadanie")||($wiersz['kategoria']=="Wiersz")){
-                    echo "<div class='tytul_kategorie'><div class='tytul_kat'>".$wiersz['tytul']."</div> <div class='kategoria'>(".$wiersz['kategoria'].") </div></div> <br />";
-                        $wyswietl_podtytul = "SELECT * FROM opowiadania WHERE opowiadanie_id=".$id;
-                        $wynik_podtytul = $db->query($wyswietl_podtytul);
+        if (($line['category']=="Opowiadanie")||($line['category']=="Wiersz")){
+                    echo "<div class='categoryTitle'>".$line['title']." <div class='category'>(".$line['category'].") </div></div> <br>";
+                        $wyswietl_subtitle = "SELECT * FROM opowiadania WHERE storyId=".$id;
+                        $result_subtitle = $db->query($wyswietl_subtitle);
 
-                        $ile = $wynik_podtytul -> num_rows;
+                        $how_many = $result_subtitle -> num_rows;
 
-                        for($pod=0; $pod < $ile; $pod++) {
-                            $wiersz = $wynik_podtytul->fetch_assoc();
-                        echo "<div class='podtytul'>
-                                <form action='index.php' method='post' class='rozdzial_open'>
-                                   <input type='hidden' name='tytul' value='".(rawurlencode($wiersz['rozdzial_tytul']))."' />        
+                        for($pod=0; $pod < $how_many; $pod++) {
+                            $line = $result_subtitle->fetch_assoc();
+                        echo "<div class='subtitle'>
+                                <form action='index.php' method='post' class='chapter_open'>
+                                   <input type='hidden' name='title' value='".(rawurlencode($line['chapterTitle']))."' />        
                                    <input type='hidden' name='id' value='".$id."' />
-                                   <input type='hidden' name='rozdzial_nr' value='".$wiersz['rozdzial_nr']."' />
-                                   <input type='submit' name='podtytul' value='".$wiersz['rozdzial_tytul']."' />         
+                                   <input type='hidden' name='chapterNumber' value='".$line['chapterNumber']."' />
+                                   <input type='submit' name='subtitle' value='".$line['chapterTitle']."' />         
                                 </form></div>";
                         }
                     }    
         else {
-            $kategoria = $wiersz['kategoria'];
-            $wyswietl_podtytul = "SELECT * FROM opowiadania WHERE opowiadanie_id=".$id;
-                $wynik_podtytul = $db->query($wyswietl_podtytul);
+            $category = $line['category'];
+            $wyswietl_subtitle = "SELECT * FROM opowiadania WHERE storyId=".$id;
+                $result_subtitle = $db->query($wyswietl_subtitle);
 
-                $ile = $wynik_podtytul->num_rows;
-                for($b=0; $b < $ile; $b++) {
-                    $wiersz = $wynik_podtytul->fetch_assoc();
-                echo "<div class='tytul_kategorie'>
-                        
-                            <form action='index.php' method='post' class='rozdzial_open'>
-                               <input type='hidden' name='tytul' value='".(rawurlencode($wiersz['rozdzial_tytul']))."' />        
+                $how_many = $result_subtitle->num_rows;
+                for($b=0; $b < $how_many; $b++) {
+                    $line = $result_subtitle->fetch_assoc();
+                echo "<div class='categoryTitle'>
+                            <form action='index.php' method='post' class='chapter_open'>
+                               <input type='hidden' name='title' value='".(rawurlencode($line['chapterTitle']))."' />        
                                <input type='hidden' name='id' value='".$id."' />
-                               <input type='submit' name='tytul' value='".$wiersz['rozdzial_tytul']."' />         
+                               <input type='submit' name='subtitle' class='categoryOther' value='".$line['chapterTitle']."' />         
                             </form>
-                       
-                        <div class='kategoria'> (".$kategoria.")</div></div>";
+                        <div class='category'> (".$category.")</div></div>";
                 }  
-        }
-            echo "<br />";
+            } 
+        echo "<div style='clear:both;'></div>";  
     }
+    
     echo "</div>";
 ?>
 

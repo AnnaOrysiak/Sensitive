@@ -2,73 +2,73 @@
 	include "connected.php";
     if(array_key_exists("getOffset", $_GET)){
         $offset=$_GET["getOffset"];
-        $nr_strony=$_GET["getNrstrony"];
+        $pageNumber=$_GET["getpageNr"];
     }
     else {
         $offset=0;			
-        $nr_strony=1;
+        $pageNumber=1;
     }
 // ustalenie liczby notek na stronie //
 
-$notki="SELECT * FROM notki ORDER BY data DESC LIMIT 5 OFFSET ".$offset;
-$wynik=$db->query("SET NAMES utf8");
-$wynik=$db->query($notki);
-$ostatnie=$wynik->num_rows;
-for($i=0; $i<$ostatnie; $i++) {
-	$wiersz=$wynik->fetch_assoc();
+$news="SELECT * FROM notki ORDER BY date DESC LIMIT 5 OFFSET ".$offset;
+$result=$db->query("SET NAMES utf8");
+$result=$db->query($news);
+$last=$result->num_rows;
+for($i=0; $i<$last; $i++) {
+	$line=$result->fetch_assoc();
 	echo "<div class='row align-items-start newsElement'>";
 	echo "<div class='newsLeft col-2'>";	
 	
-	$av="SELECT  `avatar` FROM  `uzytkownicy` WHERE  `autor` LIKE '".$wiersz['autor']."'";
+	$av="SELECT  `avatar` FROM  `uzytkownicy` WHERE  `author` LIKE '".$line['author']."'";
 	$w_av=$db->query($av);
-	$ile_av=$w_av->num_rows;
-	for($j=0; $j<$ile_av; $j++) {
+	$how_many_av=$w_av->num_rows;
+	for($j=0; $j<$how_many_av; $j++) {
 		$w=$w_av->fetch_assoc();
 		echo "<div class='newsAv'><img src='img/av/".$w['avatar']."' class='img-fluid float-left' /></div>"; 
 	}
 	
-	echo "<div class='newsDate'>".$wiersz['data']."</div>";
-	echo "<div class='newsAuthor'>".$wiersz['autor']."</div></div>";
+	echo "<div class='newsDate'>".$line['date']."</div>";
+	echo "<div class='newsAuthor'>".$line['author']."</div></div>";
 	echo "<div class='newsRight'>";
-	echo "<div class='newsTitle'>".$wiersz['notka_tytul']."</div>";
-	echo "<div class='news'>".$wiersz['notka']."</div></div>";
+	echo "<div class='newsTitle'>".$line['newsTitle']."</div>";
+	echo "<div class='news'>".$line['news']."</div></div>";
 	echo "<div style='clear:both;'></div>";
 	echo "</div>";
 
 }
 // nawigacja stronicowania //
 
-$wszystkie = "SELECT * FROM notki ORDER BY data DESC";
-$wynik_wszystkie=$db->query($wszystkie);
-$ile_notek=$wynik_wszystkie->num_rows;      
-$ile_stron = ceil($ile_notek / 5);                  
+$all = "SELECT * FROM notki ORDER BY date DESC";
+$result_all=$db->query($all);
+$how_many_news=$result_all->num_rows;      
+$how_many_stron = ceil($how_many_news / 5);                  
 
 // jak ustalić nr strony?
 
 echo "<span style='text-align:center; font-size:14px; line-height:200%; display:block;'><br />";
 if($offset>0) {
-echo " <a href='?getOffset=".($offset-5)."&getNrstrony=".($nr_strony-1)."'>Poprzednia</a> ";                
+echo " <a href='?getOffset=".($offset-5)."&getpageNr=".($pageNumber-1)."'>Poprzednia</a> ";                
 }
 
-$ile_przed=1;
-$offset_mniej=$offset;
-$strona_mniej=$nr_strony;
-while(($ile_przed >= 1)&&($ile_przed < $nr_strony)) {
-    echo " <a href='?getOffset=".($offset_mniej-5)."&getNrstrony=".($strona_mniej-1)."'>".$ile_przed."</a> ";         // co powinno być w linku?  GET $offset=($nr_strony-1)*5
-    $ile_przed++;
+$how_many_before=1;
+$offset_last=$offset;
+$page_last=$pageNumber;
+while(($how_many_before >= 1)&&($how_many_before < $pageNumber)) {
+    echo " <a href='?getOffset=".($offset_last-5)."&getpageNr=".($page_last-1)."'>".$how_many_before."</a> ";         // co powinno być w linku?  GET $offset=($pageNumber-1)*5
+    $how_many_before++;
 }
-echo "<u>".$nr_strony."</u>";
+echo "<u>".$pageNumber."</u>";
 
-$ile_po=$nr_strony;
-$offset_wiecej=$offset;
-$strona_wiecej=$nr_strony;
-while($ile_po < $ile_stron) {
-    echo " <a href='?getOffset=".($offset_wiecej+5)."&getNrstrony=".($strona_wiecej+1)."'>".($ile_po+1)."</a> ";
-    $ile_po++;
+$how_many_after=$pageNumber;
+$offset_next=$offset;
+$page_next=$pageNumber;
+while($how_many_after < $how_many_stron) {
+    echo " <a href='?getOffset=".($offset_next+5)."&getpageNr=".($page_next+1)."'>".($how_many_after+1)."</a> ";
+    $how_many_after++;
 }
 
-if($offset<$ile_stron) {
-echo " <a href='?getOffset=".($offset+5)."&getNrstrony=".($nr_strony+1)."'>Następna</a> ";                  
+if($offset<$how_many_stron) {
+echo " <a href='?getOffset=".($offset+5)."&getpageNr=".($pageNumber+1)."'>Następna</a> ";                  
 }
 echo "</span><br />";
         

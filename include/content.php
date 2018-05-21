@@ -1,10 +1,10 @@
 <?php
 
-if(isset($pickcont['podstrona'])) {                       
-    include "include/".$pickcont['podstrona'].".php";
+if(isset($pickcont['subpage'])) {                       
+    include "include/".$pickcont['subpage'].".php";
 }
 
-else if(isset($pickcont['rozdzial'])) {
+else if(isset($pickcont['chapter'])) {
     include "include/chapter.php";
  }
  

@@ -2,104 +2,104 @@
 
 include "connected.php";
 
-//	wyświetlenie tytułów opowiadań wg tytułu
+//	wyświetlenie opowiadań wg tytułu
 
-	$zapytanie1= "SELECT * FROM kategorie WHERE kategoria LIKE 'Opowiadanie' ORDER BY tytul";
-	$wynik1=$db->query("SET NAMES utf8");
-	$wynik1=$db->query($zapytanie1);
+	$question1= "SELECT * FROM kategorie WHERE category LIKE 'Opowiadanie' ORDER BY title";
+	$result1=$db->query("SET NAMES utf8");
+	$result1=$db->query($question1);
 
-	$ile1=$wynik1->num_rows;
-	for($i=0; $i<$ile1; $i++) {
-		$wiersz=$wynik1->fetch_assoc();
+	$how_many1=$result1->num_rows;
+	for($i=0; $i<$how_many1; $i++) {
+		$line=$result1->fetch_assoc();
 		
-		echo "<div class='opowiadanie'><div class='opowiadanie_tytul'>".$wiersz['tytul']."</div>";
-		$opowiadanie_id=$wiersz['opowiadanie_id'];
+		echo "<div class='story'><div class='storyTitle'>".$line['title']."</div>";
+		$storyId=$line['storyId'];
 		
-		// wyświetlenie elementów projektu wg nr rozdzialu
-		$zapytanie1a="SELECT * FROM opowiadania WHERE opowiadanie_id=".$opowiadanie_id;
-		$wynik1a=$db->query($zapytanie1a);
+		// wyświetlenie elementów projektu wg nr rozdziału
+		$question1a="SELECT * FROM opowiadania WHERE storyId=".$storyId;
+		$result1a=$db->query($question1a);
 		
-		$ile1a=$wynik1a->num_rows;
-		for($j=0; $j<$ile1a; $j++) {
-			$wiersz=$wynik1a->fetch_assoc();
-                        echo "<form action='index.php' method='post' class='rozdzial_open'>
-                                    <input type='hidden' name='tytul' value='".(rawurlencode($wiersz['rozdzial_tytul']))."' />        
-                                    <input type='hidden' name='id' value='".$opowiadanie_id."' />
-                                    <input type='hidden' name='rozdzial_nr' value='".$wiersz['rozdzial_nr']."' />
-                                    <input type='submit' name='tytul' value='".$wiersz['rozdzial_tytul']."' />         
+		$how_many1a=$result1a->num_rows;
+		for($j=0; $j<$how_many1a; $j++) {
+			$line=$result1a->fetch_assoc();
+                        echo "<form action='index.php' method='post' class='chapter_open'>
+                                    <input type='hidden' name='title' value='".(rawurlencode($line['chapterTitle']))."' />        
+                                    <input type='hidden' name='id' value='".$storyId."' />
+                                    <input type='hidden' name='chapterNumber' value='".$line['chapterNumber']."' />
+                                    <input type='submit' name='title' value='".$line['chapterTitle']."' />         
 			</form>";
 		}
 		echo "</div>";
 	}
 
 
-	echo "<div class='opowiadanie'><div class='opowiadanie_tytul'>One-shot</div>";
+	echo "<div class='story'><div class='storyTitle'>One-shot</div>";
 	
 // wyświetlenie tytułów one-shotów
 
-	$zapytanie2= "SELECT * FROM kategorie WHERE kategoria LIKE 'One-shot' ORDER BY tytul";
-	$wynik2=$db->query("SET NAMES utf8");
-	$wynik2=$db->query($zapytanie2);
+	$question2= "SELECT * FROM kategorie WHERE category LIKE 'One-shot' ORDER BY title";
+	$result2=$db->query("SET NAMES utf8");
+	$result2=$db->query($question2);
 
-	$ile2=$wynik2->num_rows;
-	for($i=0; $i<$ile2; $i++) {
-		$wiersz=$wynik2->fetch_assoc();
-		$opowiadanie_id=$wiersz['opowiadanie_id'];
-		echo "<form action='index.php' method='post' class='rozdzial_open'>
-					<input type='hidden' name='tytul' value='".(rawurlencode($wiersz['tytul']))."' />	
-					<input type='hidden' name='id' value='".$opowiadanie_id."' />
-					<input type='submit' name='tytul' value='".$wiersz['tytul']."' />
+	$how_many2=$result2->num_rows;
+	for($i=0; $i<$how_many2; $i++) {
+		$line=$result2->fetch_assoc();
+		$storyId=$line['storyId'];
+		echo "<form action='index.php' method='post' class='chapter_open'>
+					<input type='hidden' name='title' value='".(rawurlencode($line['title']))."' />	
+					<input type='hidden' name='id' value='".$storyId."' />
+					<input type='submit' name='title' value='".$line['title']."' />
 				</form>";
 	}
 	echo "</div>";
 
 	
-	echo "<div class='opowiadanie'><div class='opowiadanie_tytul'>FanFic</div>";
+	echo "<div class='story'><div class='storyTitle'>FanFic</div>";
 	
 // wyświetlenie tytułów fanficków
 
-	$zapytanie3= "SELECT * FROM kategorie WHERE kategoria LIKE 'FanFic' ORDER BY tytul";
-	$wynik3=$db->query("SET NAMES utf8");
-	$wynik3=$db->query($zapytanie3);
+	$question3= "SELECT * FROM kategorie WHERE category LIKE 'FanFic' ORDER BY title";
+	$result3=$db->query("SET NAMES utf8");
+	$result3=$db->query($question3);
 
-	$ile3=$wynik3->num_rows;
-	for($i=0; $i<$ile3; $i++) {
-		$wiersz=$wynik3->fetch_assoc();
-		$opowiadanie_id=$wiersz['opowiadanie_id'];
-		echo "<form action='index.php' method='post' class='rozdzial_open'>
-					<input type='hidden' name='tytul' value='".(rawurlencode($wiersz['tytul']))."' />	
-					<input type='hidden' name='id' value='".$opowiadanie_id."' />
-					<input type='submit' name='tytul' value='".$wiersz['tytul']."' />
+	$how_many3=$result3->num_rows;
+	for($i=0; $i<$how_many3; $i++) {
+		$line=$result3->fetch_assoc();
+		$storyId=$line['storyId'];
+		echo "<form action='index.php' method='post' class='chapter_open'>
+					<input type='hidden' name='title' value='".(rawurlencode($line['title']))."' />	
+					<input type='hidden' name='id' value='".$storyId."' />
+					<input type='submit' name='title' value='".$line['title']."' />
 				</form>";
 	}
 	echo "</div>";
 
 	
-//	wyświetlenie tytułów wierszy wg tytułu
+//	wyświetlenie wierszy wg tytułu
 
-	$zapytanie4= "SELECT * FROM kategorie WHERE kategoria LIKE 'Wiersz' ORDER BY tytul";
-	$wynik4=$db->query("SET NAMES utf8");
-	$wynik4=$db->query($zapytanie4);
+	$question4= "SELECT * FROM kategorie WHERE category LIKE 'Wiersz' ORDER BY title";
+	$result4=$db->query("SET NAMES utf8");
+	$result4=$db->query($question4);
 
-	$ile4=$wynik4->num_rows;
-	for($i=0; $i<$ile4; $i++) {
-		$wiersz=$wynik4->fetch_assoc();
+	$how_many4=$result4->num_rows;
+	for($i=0; $i<$how_many4; $i++) {
+		$line=$result4->fetch_assoc();
 		
-		echo "<div class='opowiadanie'><div class='opowiadanie_tytul'>".$wiersz['tytul']."</div>";
-		$opowiadanie_id=$wiersz['opowiadanie_id'];
+		echo "<div class='story'><div class='storyTitle'>".$line['title']."</div>";
+		$storyId=$line['storyId'];
 		
-		// wyświetlenie elementów projektu wg nr rozdzialu
-		$zapytanie4a="SELECT * FROM opowiadania WHERE opowiadanie_id=".$opowiadanie_id;
-		$wynik4a=$db->query($zapytanie4a);
+		// wyświetlenie elementów projektu wg nr chapteru
+		$question4a="SELECT * FROM opowiadania WHERE storyId=".$storyId;
+		$result4a=$db->query($question4a);
 		
-		$ile4a=$wynik4a->num_rows;
-		for($j=0; $j<$ile4a; $j++) {
-			$wiersz=$wynik4a->fetch_assoc();
-			echo "<form action='index.php' method='post' class='rozdzial_open'>
-					<input type='hidden' name='tytul' value='".(rawurlencode($wiersz['rozdzial_tytul']))."' />
-					<input type='hidden' name='id' value='".$opowiadanie_id."' />
-                                        <input type='hidden' name='rozdzial_nr' value='".$wiersz['rozdzial_nr']."' />
-					<input type='submit' name='tytul' value='".$wiersz['rozdzial_tytul']."' />
+		$how_many4a=$result4a->num_rows;
+		for($j=0; $j<$how_many4a; $j++) {
+			$line=$result4a->fetch_assoc();
+			echo "<form action='index.php' method='post' class='chapter_open'>
+					<input type='hidden' name='title' value='".(rawurlencode($line['chapterTitle']))."' />
+					<input type='hidden' name='id' value='".$storyId."' />
+                                        <input type='hidden' name='chapterNumber' value='".$line['chapterNumber']."' />
+					<input type='submit' name='title' value='".$line['chapterTitle']."' />
 				</form>";
 		}
 		echo "</div>";

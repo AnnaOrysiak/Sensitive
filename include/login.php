@@ -23,23 +23,23 @@
 	// wyeliminowanie wstrzykiwania SQL
 	$login=htmlentities($login, ENT_QUOTES, "UTF-8");
 	
-	if($rezultat =@$db->query(sprintf("SELECT * FROM uzytkownicy WHERE login='%s'",
+	if($result =@$db->query(sprintf("SELECT * FROM uzytkownicy WHERE login='%s'",
 	mysqli_real_escape_string($db,$login))))	
 	{
-			$ilu_userow = $rezultat->num_rows;
-			if($ilu_userow>0)
+			$users = $result->num_rows;
+			if($users>0)
 				{
-				$wiersz=$rezultat->fetch_assoc();
+				$line=$result->fetch_assoc();
 				
-				if(password_verify($haslo, $wiersz['haslo'])) {
+				if(password_verify($haslo, $line['haslo'])) {
 					$_SESSION['zalogowany']=true;
 
 					
-					$_SESSION['id']=$wiersz['id'];
-					$_SESSION['autor']=$wiersz['autor'];
+					$_SESSION['id']=$line['id'];
+					$_SESSION['author']=$line['author'];
 					
 						unset($_SESSION['blad']);
-						$rezultat->free_result();
+						$result->free_result();
 						header('Location: ../indexpanel.php');
 				}
 				else {

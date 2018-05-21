@@ -15,11 +15,21 @@ body {
 
 a {
     color: #312111;
+    outline: none;
 }
 
 a:hover {
     color: #BCA88F;
     text-decoration: none;
+    outline: none;
+}
+
+a:visited {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
 }
 
 .container-fluid, class {
@@ -32,12 +42,14 @@ a:hover {
     z-index: 1;
     font-family: 'Fondamento';
     color: #FAEEE0;
+    font-size: 4rem;
 }
 
 img[name="logoImg"] {
     position: fixed;
     z-index: 0;
     top: 5%;
+    padding-left: 4%;
     min-height: 25%;
     max-height: 100%;
     width: auto;
@@ -48,6 +60,7 @@ img[name="logoImg"] {
     background-repeat: repeat-x;
     background-size: contain;
     min-height: 100px;
+    margin-top: -1px;
 }
 
 .repeatImgDown {
@@ -55,6 +68,7 @@ img[name="logoImg"] {
     background-repeat: repeat-x;
     background-size: contain;
     min-height: 100px;
+    margin-bottom: -1px;
 }
 
 .imgArea {
@@ -78,17 +92,18 @@ img[name="logoImg"] {
     text-align: center;
 }
 
-.menu {
-    
+/*.menu {
+    background-color: #FAEEE0;
+    border: 1px solid #BCA88F;
+    border-radius: 30px 0px 0px 0px;
 }
-
-.content {
-    
-}
-
+*/
 .footer {
     text-align: center;  
     color: #312111;
+    background-color: #BCA88F;
+    position: relative;
+    z-index: 1;
 }
 
 .hiddenArea {
@@ -125,14 +140,24 @@ i.icon-user, i.icon-up {
 
 /* ZMIANA ROZDZIELCZOŚCI */
 
+@media all and (max-width:960px) {
+    .logoArea {
+        font-size: 3rem;
+    }
+    
+@media all and (max-width:720px) {
+    .logoArea {
+        font-size: 1.75rem;
+    }
+    
 @media all and (max-width:680px) {
+    
     .imgArea {
         min-height: 250px;
         margin: 0px 0px;
     }
 
 }
-
 /* POPRAWKI DO GOTOWEGO OSTYLOWANIA */
 
 .alert {

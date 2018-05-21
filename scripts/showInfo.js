@@ -4,7 +4,7 @@
 
 	$(document).ready(function(){
     $("#info").click(function(){
-        $("#info2").slideToggle("slow");
+        $(".info2").slideToggle("slow");
     });
 });
 </script>

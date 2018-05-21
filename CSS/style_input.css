@@ -1,7 +1,7 @@
 
-/*		pola edycji rozdziałów		*/
+/*		POLA EDYCJI ROZDZIAŁÓW		*/
 
-input.tytul {
+input.title {
 	width: 702px;
 	height: 60px;
 	margin: 10px;
@@ -20,7 +20,7 @@ input.tytul {
 	display: block;
 }
 
-input.tytul:focus {
+input.title:focus {
 	width: 702px;
 	height: 60px;
 	padding: 20px;
@@ -98,7 +98,7 @@ input.zatwierdz:hover {
 
 /*          edycja notki        */
 
-input.notka {
+input.news {
 	background-color: transparent;
 	width: 320px;
 	border: 2px solid orange;
@@ -112,12 +112,12 @@ input.notka {
 	text-align: left;
 }
 
-input.notka:hover {
+input.news:hover {
 	background-color: #bb6100;
 	color: #fff;
 }
 
-textarea[name='notka'] {
+textarea[name='news'] {
 	height: 300px;
 }
 
@@ -153,7 +153,7 @@ input[type=password]{
         letter-spacing: 3px;
 }
 
-input[type="text"][name='autor'], input[type="text"][name='mail'] {
+input[type="text"][name='author'], input[type="text"][name='mail'] {
    width: 180px; 
    margin: 5px;
    padding: 10px;
@@ -180,7 +180,7 @@ input[type=password]:focus
 	box-sizing: border-box;
 }
 
-input[type="text"][name='autor']:focus, input[type="text"][name='mail']:focus {
+input[type="text"][name='author']:focus, input[type="text"][name='mail']:focus {
    width: 180px; 
    margin: 5px;
    padding: 10px;
@@ -196,7 +196,7 @@ input[type="text"][name='autor']:focus, input[type="text"][name='mail']:focus {
    text-align: left;
 }
 
-textarea[name="opis"] {
+textarea[name="aboutMe"] {
     width: 300px;
     height: 200px;
 }

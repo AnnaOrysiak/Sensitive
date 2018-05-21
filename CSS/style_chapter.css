@@ -1,5 +1,5 @@
 
-.pojemnik {
+.chapterContainer {
 	min-height: 50px;
 	width: 95%;
 	border: none;
@@ -15,8 +15,8 @@
         line-height: 200%;
 	}
 
-.tytul_r {
-	width: 90%;
+.chapterTitle {
+	width: 95%;
 	margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
@@ -31,7 +31,7 @@
         border-radius: 30px;
 }
 
-.tresc_r {
+.chapterContent {
 	background-color: #FAEEE0;
 	width: 90%;
 	padding: 0px;
@@ -42,7 +42,7 @@
 	font-size: 18px;
 }
 
-.stronicowanie_r {
+.chapterPagination {
 	width: 500px;
 	min-height: 50px;
 	text-align: center;
@@ -54,28 +54,28 @@
 	text-indent: 0%;
 }
 
-.odstep {
+.chapterSpace {
 	min-width: 400px;
 	float: left;
 }
 
-.ikonka {
+.chapterIcon {
 	width: 40px;
 	height: 40px;
 	margin: auto;
-	border: none;
+	border: 2px solid #BCA88F;
 	border-radius: 30px;
-	background-color: #BCA88F;
-	color: #FAEEE0;
+	background-color: #FAEEE0;
+	color: #312111;
 	font-size: 30px;
 	float: left;
         outline: none;
         padding: 0px;
 }
 
-.ikonka:hover, .ikonka:active {
-        background-color: #C5B49F;
-        color: #FAEEE0;
+.chapterIcon:hover, .chapterIcon:active {
+        background-color: #FAEEE0;
+        color: #BCA88F;
         outline: none;
 }
 
@@ -83,7 +83,11 @@
         outline: none;
 }
 
-.autor_r {
+i.icon-left-open {
+    margin-left: -3px;
+}
+
+.chapterAuthor {
 	width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -99,57 +103,61 @@
 /* ZMIANA ROZDZIELCZOŚCI */
 
 @media all and (max-width: 960px) {
-     .tytul_r {
+    .chapterContainer {
+        letter-spacing: 0px;
+    }
+    
+    .chapterTitle {
 	padding: 10px 0px;
 	min-height: 20px;
 	font-family: 'Fondamento', cursive;
 	font-size: 18px;
     }
-    .tresc_r {
+    .chapterContent {
         margin-top: 20px;
         font-size: 14px;
     }
 }
 
 @media all and (max-width: 720px) {
-    .tytul_r {
+    .chapterTitle {
 	padding: 10px 0px;
 	min-height: 20px;
 	font-family: 'Fondamento', cursive;
 	font-size: 18px;
     }
-    .tresc_r {
+    .chapterContent {
         margin-top: 20px;
 	font-size: 14px;
     }
-    .stronicowanie_r {
+    .chapterPagination {
         width: 400px;
     }
-    .odstep {
+    .chapterSpace {
 	min-width: 300px;
     }
 }
 @media all and (max-width: 540px) {
-    .pojemnik {
+    .chapterContainer {
         line-height: 150%;
     }
-    .tytul_r {
+    .chapterTitle {
 	padding: 10px 0px;
 	min-height: 20px;
 	font-family: 'Fondamento', cursive;
 	font-size: 18px;
     }
-    .tresc_r {
+    .chapterContent {
 	margin-top: 20px;
 	font-size: 14px;
     }
-    .stronicowanie_r {
+    .chapterPagination {
         width: 300px;
     }
-    .odstep {
+    .chapterSpace {
 	min-width: 200px;
     }
-    .autor_r {
+    .chapterAuthor {
 	font-size: 14px;
     }
 }

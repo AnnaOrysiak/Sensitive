@@ -4,7 +4,7 @@
 	<input type="text" name="login" placeholder="login" onfocus="this.placeholder=' '" onblur="this.placeholder='login'" /><br />
 	<input type="password" name="haslo" placeholder="hasło" onfocus="this.placeholder=' '" onblur="this.placeholder='hasło'" /><br />
 	<br />
-	<input type="submit" id="zaloguj" value="Zaloguj">
+	<input type="submit" id="loginAuthor" value="Zaloguj">
 	</form>
 <?php
 	if (isset($_SESSION['blad']))	echo $_SESSION['blad'];
