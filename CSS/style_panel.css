@@ -288,33 +288,32 @@ a:visited {
 }
 
 #info, #ustawienia, #logout {
-	background-color: #BCA88F;
-	width: 30px;
-	height: 30px;
-	margin: 10px 0px;
-        margin-left: 10px;
-	padding: 0px;
-	color: #000;
-	font-size: 24px;
-        border: 1px solid #9C886F;
-	border-radius: 20px;
-        text-align: center;
+    background-color: #FAEEE0;
+    color: #312111;
+    width: 42px;
+    height: 42px;   
+    font-size: 32px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #BCA88F;
+    border-radius: 50px;
+    margin: 10px 0px;
 }
 
-#info:hover {
-	background-color: #989CBF;
+#info a:hover {
+    color: #989CBF;
 }
 
 #ustawienia:hover {
-	background-color: #BF9F5C;
+    color: #BF9F5C;
 }
 
-#logout:hover {
-	background-color: #BF8C8C;
+#logout a:hover {
+    color: #BF8C8C;
 }
 
 #info a, #ustawienia a, #logout a {
-	color: #000;
+	color: #312111;
 }
 
 #ustawienia > form > button[type="submit"][id="ustawienia"] {
