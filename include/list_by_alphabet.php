@@ -31,7 +31,7 @@ include "connected.php";
                                    <input type='submit' name='subtitle' value='".$line['chapterTitle']."' />         
                                 </form></div>";
                         }
-                    }    
+                   echo "<div style='clear:both;'></div>"; }    
         else {
             $category = $line['category'];
             $wyswietl_subtitle = "SELECT * FROM opowiadania WHERE storyId=".$id;

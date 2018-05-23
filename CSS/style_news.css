@@ -5,6 +5,7 @@
 	margin-top: 20px;
         margin-bottom: 30px;
         margin-left: 30px;
+        margin-right: 30px;
 	text-align: justify;
 	padding: 0px;
 	background-color: transparent;
@@ -59,7 +60,7 @@
 
 .news {
 	min-height: 144px;
-	font-size: 14px;
+	font-size: 16px;
 	letter-spacing: 3px;
 	line-height: 180%;
 	padding: 15px;

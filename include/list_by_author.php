@@ -63,9 +63,9 @@ include "connected.php";
                             </form><div class='category'> (".$category.")</div></div>";
                     }  
             }
-                
+          echo "<div style='clear:both;'></div>";      
         }
-        echo "<br><br>";
+        echo "<br>";
     }
  echo "</div>";
 ?>
