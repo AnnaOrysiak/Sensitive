@@ -151,6 +151,10 @@ i.icon-left-open {
 	margin-top: 20px;
 	font-size: 14px;
     }
+    img.chapterContent {
+        width: 50%;
+        height: 50%;
+    }
     .chapterPagination {
         width: 300px;
     }

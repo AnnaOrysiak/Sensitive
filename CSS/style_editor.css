@@ -1,0 +1,162 @@
+#editor {
+	margin-left: auto;
+        margin-right: auto;
+	text-align: center;
+        outline: none;
+}
+
+#editor iframe,    #editor textarea {
+	border: 1px dotted #BCA88F;
+	height: 400px;
+	width: 90%;
+	background: transparent;
+	margin-top: 5px;
+	margin-bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+	float: top;
+        border-radius: 10px;
+        line-height: 200%;
+}
+
+#editor textarea {
+	display: none;
+	padding: 5px;
+	background-color: transparent;
+	float: top;
+	border-radius: 0px;
+}
+
+#editor button {
+	min-width: 28px;
+	border: 1px solid #9C886F;
+	border-radius: 20px;
+	background-color: #BCA88F;
+	margin-left: 0px;
+	margin: 5px 5px;
+	padding: 5px 8px;
+	color: saddlebrown;
+	font-family: 'Raleway', sans-serif;
+	outline: none;
+}
+#editor button:hover {
+	background-color: #CCB89F;
+	color: #FAEEE0;
+	border: 1px solid #9C886F;
+        outline: none;
+}
+
+br {
+	clear: both;
+}
+
+.editorFunctions {
+	width: 40px;
+	height: 400px;
+	background-color: transparent;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 30px;
+        position: fixed;
+        z-index: 50;
+        right: 4%;
+        bottom: 2%;
+        
+} 
+#editorOptions {
+	width: 90%;
+	margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+}
+input[type="button"] {
+	background-color: #BCA88F;
+	border: 2px solid #9C886F;
+	border-radius: 30px;
+	padding: 20px 10px;
+	color: white;
+	outline: none;
+}
+
+input[type="button"]:hover {
+	background-color: #CCB89F;	
+        outline: none;
+}
+
+input[type="text"] {
+	width: 90%;
+	margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+	padding: 10px 0px;
+	min-height: 20px;
+	background-color: #FAEEE0;
+        color: saddlebrown;
+	font-family: 'Fondamento', cursive;
+	font-size: 24px;
+	text-align: center;
+	text-indent: 0%;
+        border: 1px solid #BCA88F;
+        border-radius: 30px;
+}
+input[type="text"]:focus {
+	background-color: #CCB89F;
+	border: 1px solid #BCA88F;
+	color: #FAEEE0;
+	text-align: center;
+	font-family: 'Fondamento', cursive;
+	font-size: 24px;
+        outline: none;
+}
+
+#editorContainer {
+   text-align: center;
+   width: 100%;
+}
+
+#editorImportant {
+width: 400px;
+background-color: #BCA88F;
+border-radius: 20px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 20px;
+padding: 20px;
+min-width: 300px;
+}
+
+#editorCategories{
+   width: 50%;
+   min-width: 100px;
+   float: left;
+   text-align: left;
+   padding: 0px;
+   border-right: 1px dotted #555;
+   display: inline-block;
+}
+
+#editorAuthors {
+	width: 40%;
+	text-align: left;
+	float:left;
+	padding-left: 30px;
+}
+
+/* ZMIANA ROZDZIELCZOŚCI */
+
+@media all and (max-width:1360px) {
+    .editorFunctions {
+        position: fixed;
+        right: 4%;
+        bottom: 2%;
+    }
+}
+
+@media all and (max-width:1366px) {
+    .editorFunctions {
+        position: fixed;
+        right: 4%;
+        bottom: 2%;
+    }
+}

@@ -58,12 +58,13 @@
         <div class="container-fluid">
 
             <div class="row align-items-start logoArea">
-                <img src="img/sensitive_us.png" class="img-fluid float-left" name="logoImg"> 
+                <img src="img/logoMainImage.png" class="img-fluid float-left col-10 col-sm-8 col-xl-12" name="logoImg"> 
                 <div class="col-12 noPadding"> <div class="repeatImgUp"> </div> </div>
-                <div class="col-0 col-lg-0 col-xl-2">
+                <div class="col-0 col-lg-0 col-xl-1">
                 </div>
-                <div class="col-8 col-lg-8 col-xl-7 align-items-center"> <div class="imgArea"> </div> </div>
-                <div class="col-4 col-lg-4  col-xl-3 align-self-end"><span style="color: #9C886F;"><i class="icon-feather"></i></span>Sensitive</div>
+                <div class="col-8 col-lg-7 col-xl-7 align-items-center"> <div class="imgArea"> </div> </div>
+                <div class="col-4 col-lg-3  col-xl-3 align-self-end"><img src="img/logoSensitive.png" class="img-fluid"></div>
+                <div class="col-0 col-lg-1 col-xl-1"> </div>
                 <div class="col-12 align-self-end noPadding"> <div class="repeatImgDown"> </div> </div>
             </div>
            

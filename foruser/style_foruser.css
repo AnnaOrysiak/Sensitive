@@ -1,0 +1,171 @@
+body {
+	background-color: #BCA88F;
+	color: saddlebrown;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+div {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	width: 300px;
+	min-height: 5%;
+	text-align: center;
+	background-color: #FAEEE0;
+	border: 2px dashed saddlebrown;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+h1 {
+	font-size: 20px;	
+	color: saddlebrown;
+}
+
+h2 {
+	font-size: 16px;	
+}
+
+#container {
+	width: 80%;
+	margin-top: 5%;
+	text-align: center;
+	border: none;
+}
+
+#inputs1 {
+	width: 100%;
+	margin-top: 10%;
+	margin-bottom: 2%;
+	text-align: center;
+	border: none;
+	padding: 0px;
+	font-size: 14px;
+}
+
+#accept {
+	text-align: center;
+	border: none;
+	clear: both;
+	padding: 0%;
+	padding-top: 10%;
+	width: 40%;
+	margin-top: 5%;
+}
+
+#clear {
+	clear: both; 
+	border: none; 
+	width: 1px; 
+	height: 1px; 
+	min-height: 1px;
+	margin: 0px; 
+	padding: 0px;
+}
+
+input[type="password"] {
+	background-color: #FAEEE0;
+	width: 200px;
+	padding: 5px;
+	color: #BCA88F;
+	border: 1px solid #BCA88F; 
+        border-radius: 5px;
+	outline: none;
+	letter-spacing: 5px;
+}
+
+input[type="password"]:focus {
+	background-color: #DECAAF;
+	border-color: #BCA88F;
+	color: #fff;
+}
+
+input[type="submit"] {
+	width: 50px;
+	height: 50px;
+	background-color: #009900;
+	padding: 5px;
+	color: #fff;
+	border: 2px solid #009900;
+	border-radius: 30px;
+	outline :none;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+input[type="submit"]:hover {
+	background-color: #00CC00;
+}
+
+input[type="text"] {
+	background-color: #FAEEE0;
+	width: 200px;
+	padding: 5px;
+	color: #BCA88F;
+	border: 1px solid #BCA88F; 
+        border-radius: 5px;
+	outline: none;
+	letter-spacing: 5px;	
+}
+
+input[type="text"]:focus {
+	background-color: #DECAAF;
+	border-color: #BCA88F;
+	color: #fff;
+}
+
+input:-moz-placeholder {color: saddlebrown}
+input::-webkit-input-placeholder {color: saddlebrown}
+
+
+.error {
+	color: #cc0000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+div.g-recaptcha{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	width: 304px;
+	min-height: auto;
+	border: none;
+	clear: both;
+	font-size: 12px;
+	text-align: center;
+}
+
+.g-recaptcha div{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	width: 304px;
+	height: 78px;
+	min-height: auto;
+	border: none;
+	clear: both;
+}
+
+.g-recaptcha div > div{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	width: 304px;
+	min-height: auto;
+	border: none;
+	clear: both;
+}
+
+.g-recaptcha div > iframe {
+	background-color: #FAEEE0;
+	border: 1px solid saddlebrown;
+	margin: 0px;
+	border-radius: 5px;
+}
